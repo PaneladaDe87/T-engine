@@ -2,4 +2,4 @@ name: Build
 
 on:
     push:
-        branch[main]
+        branches[main]
