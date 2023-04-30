@@ -21,8 +21,8 @@ jobs:
     # Cria o APK usando o Pygame
     - name: Build APK
       run: |
-        python3 setup.py build
-        python3 setup.py apk
+        python3 main.py build
+        python3 main.py apk
 
     # Executa o APK em um emulador do Android
     - name: Run APK
