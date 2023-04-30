@@ -11,11 +11,12 @@ CAPTION = pygame.display.set_caption("T-Engine")
 class RUN:
     def START(self):
         self.RUNNING = True
-        while self.RUNNING = True:
+        while self.RUNNING == True:
             for EVENT in pygame.event.get():
-                if EVENT == pygame.QUIT:
-                    self.RUNNING = false
+                if EVENT.type == pygame.QUIT:
+                    self.RUNNING = False
                     pygame.quit()
                     
 if __name__ == 'main':
-    RUN.START()
+    GAME = RUN()
+    GAME.START()
