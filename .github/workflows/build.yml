@@ -1,0 +1,37 @@
+name: build
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    # Instala as dependências necessárias para compilar o APK
+    - name: Install Dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y python3-pip
+        sudo apt-get install -y build-essential python3-dev libjpeg-dev libtiff-dev libsdl1.2-dev libffi-dev libssl-dev
+        pip3 install --upgrade pip
+        pip3 install pygame
+
+    # Cria o APK usando o Pygame
+    - name: Build APK
+      run: |
+        python3 setup.py build
+        python3 setup.py apk
+
+    # Executa o APK em um emulador do Android
+    - name: Run APK
+      run: |
+        # Inicializa o emulador
+        emulator -avd Pixel_3a_API_30 -no-window -no-audio -gpu swiftshader_indirect -no-boot-anim -dns-server 8.8.8.8 &
+        # Espera o emulador iniciar
+        sleep 30
+        # Instala o APK no emulador
+        adb install -r bin/*.apk
+        # Executa o APK
+        adb shell monkey -p com.example.mygame -c android.intent.category.LAUNCHER 1
