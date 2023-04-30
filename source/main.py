@@ -1,5 +1,4 @@
 import pygame
-import time
 import numpy
 
 pygame.init()
@@ -24,12 +23,10 @@ class RUN:
                 if EVENT.type == pygame.QUIT:
                     self.RUNNING = False
                     
-            # lol
             WINDOW.fill(BLACK)
             pygame.display.flip()
                     
         LOAD_ICON()
-        
         pygame.quit()
                     
 if __name__ == '__main__':
