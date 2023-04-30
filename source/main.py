@@ -3,7 +3,7 @@ import numpy
 
 pygame.init()
 
-BLACK = ((0, 0, 0))
+BLACK = (0, 0, 0)
 
 WIDTH = 1280
 HEIGHT = 720
