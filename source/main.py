@@ -2,8 +2,10 @@ import pygame
 
 pygame.init()
 
-WIDTH = 800
-HEIGHT = 600
+BLACK = ((255, 255, 255))
+
+WIDTH = 1280
+HEIGHT = 720
 
 WINDOW = pygame.display.set_mode((WIDTH, HEIGHT))
 CAPTION = pygame.display.set_caption("T-Engine")
@@ -19,9 +21,12 @@ class RUN:
             for EVENT in pygame.event.get():
                 if EVENT.type == pygame.QUIT:
                     self.RUNNING = False
-                    pygame.quit()
                     
-            LOAD_ICON()
+            # lol
+            WINDOW.fill(BLACK)
+            pygame.display.flip()
+                    
+        LOAD_ICON()
                     
 if __name__ == '__main__':
     GAME = RUN()
