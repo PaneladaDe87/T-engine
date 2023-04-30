@@ -17,6 +17,6 @@ class RUN:
                     self.RUNNING = False
                     pygame.quit()
                     
-if __name__ == 'main':
+if __name__ == '__main__':
     GAME = RUN()
     GAME.START()
