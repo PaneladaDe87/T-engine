@@ -1,0 +1,23 @@
+name: Game Engine Workflow
+on:
+  push:
+    branches: [ main ]
+  
+  workflow_dispatch:
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    - name: Build game engine
+      run: |
+        python build_engine.py
