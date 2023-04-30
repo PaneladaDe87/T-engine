@@ -20,4 +20,4 @@ jobs:
         pip install -r requirements.txt
     - name: Build game engine
       run: |
-        python main.py
+        python ./source/main.py
