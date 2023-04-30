@@ -18,6 +18,10 @@ jobs:
         pip3 install --upgrade pip
         pip3 install pygame
 
+    # Inclui o ícone no pacote final do APK
+    - name: Include Icon in APK
+      run: aapt add bin/*.apk ./icon.png
+
     # Cria o APK usando o Pygame
     - name: Build APK
       run: |
