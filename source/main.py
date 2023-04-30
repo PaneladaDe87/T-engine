@@ -1,4 +1,6 @@
 import pygame
+import time
+import numpy
 
 pygame.init()
 
@@ -27,6 +29,8 @@ class RUN:
             pygame.display.flip()
                     
         LOAD_ICON()
+        
+        pygame.quit()
                     
 if __name__ == '__main__':
     GAME = RUN()
