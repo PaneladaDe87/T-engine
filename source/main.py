@@ -3,7 +3,7 @@ import numpy
 
 pygame.init()
 
-BLACK = ((255, 255, 255))
+BLACK = ((0, 0, 0))
 
 WIDTH = 1280
 HEIGHT = 720
@@ -12,8 +12,8 @@ WINDOW = pygame.display.set_mode((WIDTH, HEIGHT))
 CAPTION = pygame.display.set_caption("T-Engine")
 
 class LOAD_ICON:
-    def __init__():
-        ICON = pygame.image.load_image("./icon.png")
+    def __init__(self):
+        self.ICON = pygame.image.load_image("./icon.png")
 
 class RUN:
     def START(self):
