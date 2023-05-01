@@ -20,7 +20,7 @@ jobs:
     - name: Build APK
       run: python main.py
     - name: Upload APK
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: T-Engine APK
-        path: ./dist/T-Engine.apk
+        path: ./T-Engine.apk
