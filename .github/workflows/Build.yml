@@ -18,7 +18,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Build APK
-        run: python main.py
+        run: python -v main.py
       - name: Upload APK
         uses: actions/upload-artifact@v3
         with:
@@ -36,7 +36,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Build EXE
-        run: python main.py
+        run: python -v main.py
       - name: Upload EXE
         uses: actions/upload-artifact@v3
         with:
