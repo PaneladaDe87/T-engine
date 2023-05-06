@@ -21,7 +21,9 @@ jobs:
       run: pip install buildozer
 
     - name: Install dependencies
-      run: buildozer android debug deploy run
+      run: |
+        buildozer android debug deploy run
+        pip install cython
 
     - name: Upload artifact
       uses: actions/upload-artifact@v2
