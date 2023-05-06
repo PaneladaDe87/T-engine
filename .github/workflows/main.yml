@@ -1,0 +1,30 @@
+name: Build Android App
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+
+    - name: Install Buildozer
+      run: pip install buildozer
+
+    - name: Install dependencies
+      run: buildozer android debug deploy run
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: debug.apk
+        path: ./bin/debug.apk
