@@ -22,8 +22,9 @@ jobs:
 
     - name: Install dependencies
       run: |
+        sudo apt-get update
+        sudo apt-get install cython
         buildozer android debug deploy run
-        pip install cython
 
     - name: Upload artifact
       uses: actions/upload-artifact@v2
