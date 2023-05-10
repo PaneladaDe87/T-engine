@@ -1,4 +1,4 @@
-name: Build APK
+name: APK
 
 on:
   push:
@@ -25,6 +25,7 @@ jobs:
     - name: Install dependencies
       run: |
         pip install cython
+        
         buildozer android debug deploy run
 
     - name: Upload artifact
