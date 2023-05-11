@@ -26,7 +26,7 @@ jobs:
       run: |
         pip install cython
         sudo apt update
-        sudo apt install aidl
+        sudo apt install Aidl
         buildozer android debug deploy run
 
     - name: Upload artifact
