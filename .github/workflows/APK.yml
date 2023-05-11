@@ -25,7 +25,8 @@ jobs:
     - name: Install dependencies
       run: |
         pip install cython
-        pip install --upgrade aidl
+        apt get-update
+        apt get-install aidl
         buildozer android debug deploy run
 
     - name: Upload artifact
