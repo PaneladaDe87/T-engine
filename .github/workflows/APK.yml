@@ -25,8 +25,8 @@ jobs:
     - name: Install dependencies
       run: |
         pip install cython
-        sudo apt update
-        sudo apt install aidl
+        sudo apt-get update
+        sudo apt-get install -y aidl
 
     - name: Build APK
       run: |
