@@ -25,11 +25,12 @@ jobs:
     - name: Install dependencies
       run: |
         pip install cython
-        sudo apt-get update
-        sudo apt-get install -y aidl
 
     - name: Build APK
       run: |
+        sudo apt-get update
+        sudo apt-get upgrade
+        sudo apt-get install -y aidl
         buildozer android deploy
         buildozer android run
 
