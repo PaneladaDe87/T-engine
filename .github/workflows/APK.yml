@@ -30,7 +30,6 @@ jobs:
 
     - name: Build APK
       run: |
-        buildozer android debug
         buildozer android deploy
         buildozer android run
 
