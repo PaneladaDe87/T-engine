@@ -7,11 +7,22 @@ height = 720
 
 # draw cube
 class cube:
-    def model(self):
+    def model(self, size):
         distance = 50
         
         # create a cube
-        projected_points = []
+        self.size = size
+        
+        self.vertices = [
+            numpy.array([x, y, z])
+            for x in (-size, size)
+            for y in (-size, size)
+            for z in (-size, size)
+        ]
+        
+    def draw(self, surface):
+        for v in self.vertices:
+            
 
 def game():
     running = True
