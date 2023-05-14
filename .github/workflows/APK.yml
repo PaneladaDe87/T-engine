@@ -33,8 +33,8 @@ jobs:
         sudo apt-get install -y aidl
         aidl -version
         sdkmanager --version
-        buildozer android deploy
-        buildozer android run
+        buildozer android -o deploy
+        buildozer android -o run
 
     - name: Upload artifact
       uses: actions/upload-artifact@v2
