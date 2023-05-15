@@ -22,7 +22,8 @@ class cube:
         
     def draw(self, surface):
         for v in self.vertices:
-            
+            x, y, z = v
+            x, y = x * 2 / (2 - z / self.size), y * 2 / (2 - z / self.size)
 
 def game():
     running = True
