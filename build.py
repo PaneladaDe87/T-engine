@@ -6,7 +6,7 @@ def main():
     apk_dir = "./bin"
     os.makedirs(apk_dir, exist_ok=True)
     
-    apk_path = "./bin/debug.apk"
+    apk_path = "./bin/debug"
     shutil.copy(apk_path, apk_dir)
     
     print("tudo certo :D")
