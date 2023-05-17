@@ -11,5 +11,4 @@ def main():
     
     print("tudo certo :D")
     
-if __name__ == "__build__":
-    main()
+main()
