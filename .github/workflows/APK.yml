@@ -37,4 +37,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: t-engine debug APK
-        path: ./debug.apk
+        path: ./bin/debug
