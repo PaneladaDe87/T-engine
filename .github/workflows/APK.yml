@@ -26,7 +26,9 @@ jobs:
         python-version: 3.x
         
     - name: Create Directories
-      run: mkdir ./bin/debug
+      run: |
+        cd ~
+        mkdir debug/apk
      
     - name: Install Requirements
       run: |
@@ -40,4 +42,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: t-engine debug APK
-        path: ./bin/debug
+        path: debug/apk
