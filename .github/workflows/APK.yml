@@ -26,7 +26,7 @@ jobs:
         python-version: 3.x
         
     - name: Create Directories
-      run: mkdir bin/debug
+      run: mkdir ./bin/debug
      
     - name: Install Requirements
       run: |
