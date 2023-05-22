@@ -22,7 +22,7 @@ android.permissions = INTERNET, ACCESS_NETWORK_STATE, ACESS_EXTERNAL_STORAGE
 requirements = pygame, numpy
 
 # Nome do arquivo principal do seu aplicativo
-source.filename = source/main.py
+source.dir = source/main.py
 
 # Ícone do aplicativo (coloque o arquivo .png na pasta do projeto)
 source.icon = icon.png
