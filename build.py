@@ -3,11 +3,10 @@ import shutil
 
 def main():
     os.system("python -m compileall -b source")
-    os.system("mkdir debug/apk")
     apk_dir = "debug/apk"
     os.makedirs(apk_dir, exist_ok=True)
     
-    apk_path = "debug/apk/app-debug.apk"
+    apk_path = "debug/apk"
     shutil.copy(apk_path, apk_dir)
     
     print("tudo certo :D")
