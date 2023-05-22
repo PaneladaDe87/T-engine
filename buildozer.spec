@@ -68,16 +68,6 @@ android.console = True
 
 android.adb_args = -d
 
-# (str) Permissões do Android para APK
-
-android.permissions = INTERNET
-
-# (str) Permissões adicionais específicas do Android para APK
-
-android.permissions = CAMERA, WRITE_EXTERNAL_STORAGE
-
-# (list) Pacotes Python adicionais a serem incluídos no pacote
-
 p4a.architectures = armeabi-v7a, arm64-v8a
 
 # (list) Bibliotecas compartilhadas do Android a serem incluídas
@@ -97,12 +87,6 @@ android.external_storage = False
 android.arch = armeabi-v7a
 
 # (list) Permissões do Android para APK
-
-android.permissions = INTERNET
-
-# (list) Permissões adicionais específicas do Android para APK
-
-android.permissions = CAMERA, WRITE_EXTERNAL_STORAGE
 
 # (list) Pacotes Python adicionais a serem incluídos no pacote
 
