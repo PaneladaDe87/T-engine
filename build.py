@@ -3,6 +3,7 @@ import shutil
 
 def main():
     os.system("python -m compileall -b source")
+    os.system("mkdir debug/apk")
     apk_dir = "debug/apk"
     os.makedirs(apk_dir, exist_ok=True)
     
