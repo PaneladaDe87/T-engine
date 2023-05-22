@@ -42,11 +42,7 @@ source.exclude_patterns = tests/*,bin/*
 
 # (list) Permissões do aplicativo
 
-android.permissions = INTERNET
-
-# (list) Permissões adicionais específicas do Android
-
-android.permissions = CAMERA, READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE
+android.permissions = INTERNET, READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE
 
 # (list) Serviços específicos do Android
 
