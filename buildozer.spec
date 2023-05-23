@@ -28,7 +28,7 @@ source.dir = source/main.py
 source.icon = icon.png
 
 # Incluir arquivos adicionais necessários para o seu aplicativo (se houver)
-source.include_exts = py,png,json
+source.include_exts = py,png
 
 # Diretórios a serem excluídos da construção
 source.exclude_patterns = __pycache__/*, .git/*
